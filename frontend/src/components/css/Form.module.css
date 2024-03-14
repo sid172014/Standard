@@ -1,0 +1,78 @@
+/* styles.module.css */
+
+.user-form-body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.user-form-container {
+    width: 500px;
+    background-color: #5eafd283;
+    padding: 50px 30px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    z-index: 2;
+    margin-left: 200px;
+}
+
+.user-form-h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.user-form-group {
+    margin-bottom: 20px;
+}
+
+.user-form-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 25%;
+    color: #fff;
+}
+
+.user-form-input {
+    width: calc(100% - 0px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    border-radius: 5px;
+}
+
+.user-form-submit {
+    background-color: #002035;
+    font-size: 15px;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transition: background-color 0.3s ease;
+}
+
+.user-form-submit:hover {
+    background-color: #5eafd283;
+}
+
+.user-form-link {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 5px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.user-form-link:hover {
+    color: #d2f1fe;
+}

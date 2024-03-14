@@ -5,16 +5,20 @@ import './App.css'
 
 import CameraComponent from './components/CameraComponent'
 import SignInSignUp from './components/login'
+import Form from "./components/Form";
 
 
 function App() {
 
   return (
     <div>
-      <BrowserRouter>
+  <BrowserRouter>
         <Routes>
+         
           <Route path="/" element={<SignInSignUp></SignInSignUp>}></Route>
+          <Route path="/form" element={<Form></Form>}></Route>
           <Route path="/kyc" element={<CameraComponent></CameraComponent>}></Route>
+
         </Routes>
       </BrowserRouter>
     </div>
