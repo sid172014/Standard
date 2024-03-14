@@ -83,15 +83,21 @@ const CameraComponent = () => {
       console.log(formData);
 
       // Use Axios to send the FormData to your server-side endpoint for saving
-      axios
-        .post("http://localhost:3000/saveImage", formData)
-        .then((response) => {
-          console.log("Image saved successfully:", response.data);
-          setImageData(response.data);
+      // axios
+      //   .post("http://localhost:3000/saveImage", formData)
+      //   .then((response) => {
+      //     console.log("Image saved successfully:", response.data);
+      //     setImageData(response.data);
+      //   })
+      //   .catch((error) => {
+      //     console.error("Error saving image:", error);
+      //   });
+
+        axios.get('http://localhost:5000/run_main').then((response) => {
+          console.log(response.data);
+        }).catch((e) => {
+          console.log(e);
         })
-        .catch((error) => {
-          console.error("Error saving image:", error);
-        });
     }
   };
   const dataURLtoBlob = (dataURL) => {

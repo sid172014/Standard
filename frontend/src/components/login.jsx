@@ -4,11 +4,12 @@ import { useNavigate } from "react-router-dom";
 
 import "./css/login.css";
 
-function SignInSignUp() {
+function SignInSignUp({userInfo,setUserInfo}) {
   const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
+
   const [isSignUp, setIsSignUp] = useState(false);
 
 
@@ -23,6 +24,7 @@ function SignInSignUp() {
   const handleLoginSubmit = (event) => {
     event.preventDefault();
     // Here you can access username and password state variables
+    
     navigate('/kyc');
     console.log(username);
     console.log(password);
@@ -31,6 +33,14 @@ function SignInSignUp() {
   const handleSignUpSubmit = (event) => {
     event.preventDefault();
     // Here you can access username, email, and password state variables
+    setUserInfo((prev) => {
+      const newObject = {...prev};
+      newObject.username = username;
+      newObject.password = password;
+      newObject.email = email;
+      console.log(newObject);
+      return newObject;
+    });
     console.log("Username:", username);
     console.log("Email:", email);
     console.log("Password:", password);
