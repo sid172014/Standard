@@ -5,7 +5,7 @@ function App() {
 
   return (
     <div>
-      Hello baura
+      Hello laura
       <CameraComponent></CameraComponent>
     </div>
   )
