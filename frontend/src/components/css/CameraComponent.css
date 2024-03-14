@@ -1,0 +1,18 @@
+.cameraComponent #videoelement{
+    min-height: 90vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 90vh;
+    
+}
+
+
+.cameraComponent #buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding-left: 5%;
+    padding-right: 5%;
+}
