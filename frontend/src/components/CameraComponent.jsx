@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import axios from "axios";
 // Importing CSS
 import "../components/css/CameraComponent.css";
+import captureIcon from "./1.svg";
+
 
 const CameraComponent = () => {
   // For the video element
@@ -84,7 +86,7 @@ const CameraComponent = () => {
       axios
         .post("http://localhost:3000/saveImage", formData)
         .then((response) => {
-          console.log("Image saved successfully:" , response.data);
+          console.log("Image saved successfully:", response.data);
           setImageData(response.data);
         })
         .catch((error) => {
@@ -109,17 +111,22 @@ const CameraComponent = () => {
       <div id="videoelement">
         {/* For the video component to be rendered and played automatically when the stream state variable has a value or it is defined */}
         <video ref={videoRef} autoPlay></video>
-        <canvas ref={canvasRef} style={{ display: "none" }} />
+        <canvas ref={canvasRef} style={{ display: "none"}} />
       </div>
-      <div style={{ width: "100%", textAlign: "center" }}>
+      <button className="capturebutton" onClick={capturePhotos}>
+        <img src={captureIcon} alt="Capture Icon" style={{ width: '50px', height: '50px', padding:'0px' ,margin:'10px' }} />
+      </button>
+     
+
+
+      <div style={{ width: "100%", textAlign: "center" ,color:"white", marginBottom:"10px"}}>
         {textContent[step]}
       </div>
       <div id="buttons">
         <button onClick={startCamera}>Start Camera</button>
-        <button onClick={capturePhotos}>Capture</button>
         <button onClick={stopCamera}>Stop Camera</button>
       </div>
-      
+
       {/* Display captured photo */}
       {imageData && (
         <img src={imageData} alt="Base64 image" />)}
