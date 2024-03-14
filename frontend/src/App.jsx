@@ -1,11 +1,12 @@
 import './App.css'
 import CameraComponent from './components/CameraComponent'
+import SignInSignUp from './components/login'
 
 function App() {
 
   return (
     <div>
-      Hello baura
+      <SignInSignUp></SignInSignUp>
       <CameraComponent></CameraComponent>
     </div>
   )
